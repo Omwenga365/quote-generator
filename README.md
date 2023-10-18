@@ -5,3 +5,4 @@ hello there, your task is to add social media share buttons, which can be used t
 fork the repository and start working on it.
 
 best of luck.# simple-quote-generator
+# quote-generator
