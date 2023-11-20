@@ -79,3 +79,16 @@ h1{
     grid-column: 2/4;
     grid-row: 1;
 }
+
+.btns button:nth-child(4), .btns button:nth-child(5) {
+    grid-column: span 1;
+    padding: 8px;
+    background-color: #25d366; 
+  }
+  
+  .btns button:nth-child(5) {
+    background-color: #00acee; 
+  }
+  
+  
+  
