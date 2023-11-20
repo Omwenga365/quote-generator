@@ -6,7 +6,38 @@ import Favorites from './components/Favorites';
 
 const App = () => {
   const url = "https://api.quotable.io/random";
-  // ... (other existing code)
+  
+  // Placeholder values for state variables
+  const [quote, setQuote] = useState({
+    content: "Let time be your only competitor.",
+    author: "Ahmed Saber"
+  });
+
+  const generateQuote = () => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setQuote(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching quote:", error);
+      });
+  };
+
+  const copy = () => {
+    navigator.clipboard.writeText(quote.author + " once said: " + quote.content);
+    alert('Copied');
+  };
+
+  const shareOnWhatsApp = () => {
+    const text = encodeURIComponent(quote.author + " once said: " + quote.content);
+    window.open(`https://api.whatsapp.com/send?text=${text}`);
+  };
+
+  const shareOnTwitter = () => {
+    const text = encodeURIComponent(quote.author + " once said: " + quote.content);
+    window.open(`https://twitter.com/intent/tweet?text=${text}`);
+  };
 
   return (
     <Router>
