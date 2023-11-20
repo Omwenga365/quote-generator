@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Favorites from './Favorites';
 
@@ -11,6 +11,12 @@ const App = () => {
     <Router>
       <>
         <h1>Quote Generator React App</h1>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/favorites">Favorites</Link></li>
+          </ul>
+        </nav>
         <Route
           path="/"
           exact
