@@ -1,11 +1,12 @@
 // App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import Favorites from './Favorites';
+import Home from './components/Home';
+import Favorites from './components/Favorites';
 
 const App = () => {
-  // ... (your existing code)
+  const url = "https://api.quotable.io/random";
+  // ... (other existing code)
 
   return (
     <Router>
