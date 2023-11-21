@@ -1,9 +1,14 @@
 // Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Home = ({ quote, generateQuote, copy, shareOnWhatsApp, shareOnTwitter }) => {
-  // Check if quote is undefined or null before accessing its properties
+  useEffect(() => {
+    // Fetch a new quote when the component mounts
+    generateQuote();
+  }, [generateQuote]); // Run only when generateQuote changes
+
   if (!quote) {
+    // If quote is undefined, display a loading message
     return (
       <div>
         Loading quote...
