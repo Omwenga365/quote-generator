@@ -91,4 +91,25 @@ h1{
   }
   
   
+  /* Favorites.css */
+
+.favorites-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorites-heading {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .favorites-description {
+    color: #666;
+    font-size: 16px;
+  }
   
